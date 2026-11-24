@@ -1,10 +1,7 @@
-// Exercise 3: form validation
-// Lesson learned: never trust user input. Check everything on submit.
-
 var form = document.getElementById("signup-form");
 
 form.addEventListener("submit", function (event) {
-  event.preventDefault(); // stop the page from reloading on submit
+  event.preventDefault();
 
   var name = document.getElementById("name").value.trim();
   var email = document.getElementById("email").value.trim();
@@ -15,8 +12,7 @@ form.addEventListener("submit", function (event) {
   var passwordError = document.getElementById("password-error");
   var successMsg = document.getElementById("success-msg");
 
-  // clear old errors first, otherwise old messages stayed on screen
-  nameError.textContent = "";
+nameError.textContent = "";
   emailError.textContent = "";
   passwordError.textContent = "";
   successMsg.textContent = "";
@@ -28,8 +24,7 @@ form.addEventListener("submit", function (event) {
     isValid = false;
   }
 
-  // simple email check: must contain @ and a dot after it
-  if (email === "" || email.indexOf("@") === -1 || email.indexOf(".", email.indexOf("@")) === -1) {
+if (email === "" || email.indexOf("@") === -1 || email.indexOf(".", email.indexOf("@")) === -1) {
     emailError.textContent = "Please enter a valid email address.";
     isValid = false;
   }

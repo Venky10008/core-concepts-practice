@@ -2,15 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <!-- The viewport meta tag below is what actually makes responsive CSS work on phones.
-       I forgot it once and the page stayed desktop-width on mobile. -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Exercise 6 - Responsive Layout</title>
   <link rel="stylesheet" href="../css/style.css" />
   <style>
     .two-col {
       display: grid;
-      grid-template-columns: 2fr 1fr; /* main column twice as wide as sidebar */
+      grid-template-columns: 2fr 1fr;
       gap: 1rem;
     }
 
@@ -26,8 +25,7 @@
       border-radius: 8px;
     }
 
-    /* Stack the columns on phones */
-    @media (max-width: 600px) {
+@media (max-width: 600px) {
       .two-col {
         grid-template-columns: 1fr;
       }

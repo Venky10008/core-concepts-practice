@@ -1,12 +1,9 @@
-/* Shared styles for all Task 2 exercises.
-   I kept one stylesheet so every page looks consistent (DRY principle). */
-
 * {
-  box-sizing: border-box; /* makes padding stay inside the element width, avoids overflow bugs */
+  box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif; /* system fonts = no extra downloads, loads faster */
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   line-height: 1.6;
   background-color: #f4f6f8;
@@ -22,7 +19,7 @@ body {
 
 .container {
   max-width: 900px;
-  margin: 0 auto; /* centers the content on wide screens */
+  margin: 0 auto;
   padding: 1rem;
 }
 
@@ -56,7 +53,6 @@ body {
   font-size: 0.85rem;
 }
 
-/* shared bits used inside the exercise pages */
 .card {
   background: #fff;
   padding: 1rem;
@@ -76,7 +72,7 @@ button {
 }
 
 button:hover {
-  background-color: #1d4ed8; /* slightly darker on hover so the user gets feedback */
+  background-color: #1d4ed8;
 }
 
 input {
@@ -87,12 +83,11 @@ input {
 }
 
 .error-text {
-  color: #dc2626; /* red for validation errors, standard convention */
+  color: #dc2626;
   font-size: 0.9rem;
   margin-top: 0.25rem;
 }
 
-/* Mobile first media query: tighten padding on small screens */
 @media (max-width: 600px) {
   .site-header h1 {
     font-size: 1.3rem;
