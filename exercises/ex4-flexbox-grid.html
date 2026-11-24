@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercise 4 - Flexbox and Grid</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    /* Page-specific styles: Flexbox vs Grid comparison */
+
+    .flex-row {
+      display: flex;
+      gap: 0.5rem; /* gap is easier than margins between items, learned this the hard way */
+      flex-wrap: wrap; /* items drop to the next line when the screen is too narrow */
+    }
+
+    .grid-box {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+      gap: 0.5rem;
+    }
+
+    .demo-item {
+      background: #2563eb;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 6px;
+    }
+
+    /* On small screens the grid collapses to 1 column */
+    @media (max-width: 600px) {
+      .grid-box {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header"><h1>Exercise 4: Flexbox and CSS Grid</h1></header>
+  <main class="container">
+    <div class="card">
+      <h2>Flexbox (good for one row/column of items)</h2>
+      <div class="flex-row">
+        <div class="demo-item">One</div>
+        <div class="demo-item">Two</div>
+        <div class="demo-item">Three</div>
+        <div class="demo-item">Four</div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Grid (good for 2D layouts, rows and columns together)</h2>
+      <div class="grid-box">
+        <div class="demo-item">1</div>
+        <div class="demo-item">2</div>
+        <div class="demo-item">3</div>
+        <div class="demo-item">4</div>
+        <div class="demo-item">5</div>
+        <div class="demo-item">6</div>
+      </div>
+    </div>
+    <p><a href="../index.html">Back to home</a></p>
+  </main>
+</body>
+</html>
