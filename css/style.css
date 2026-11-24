@@ -1,0 +1,103 @@
+/* Shared styles for all Task 2 exercises.
+   I kept one stylesheet so every page looks consistent (DRY principle). */
+
+* {
+  box-sizing: border-box; /* makes padding stay inside the element width, avoids overflow bugs */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif; /* system fonts = no extra downloads, loads faster */
+  margin: 0;
+  line-height: 1.6;
+  background-color: #f4f6f8;
+  color: #222;
+}
+
+.site-header {
+  background-color: #2563eb;
+  color: #fff;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto; /* centers the content on wide screens */
+  padding: 1rem;
+}
+
+.exercise-list {
+  list-style: none;
+  padding: 0;
+}
+
+.exercise-list li {
+  background: #fff;
+  margin: 0.75rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.exercise-list a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.exercise-list a:hover {
+  text-decoration: underline;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* shared bits used inside the exercise pages */
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+button {
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #1d4ed8; /* slightly darker on hover so the user gets feedback */
+}
+
+input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.error-text {
+  color: #dc2626; /* red for validation errors, standard convention */
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+/* Mobile first media query: tighten padding on small screens */
+@media (max-width: 600px) {
+  .site-header h1 {
+    font-size: 1.3rem;
+  }
+  .container {
+    padding: 0.5rem;
+  }
+}
